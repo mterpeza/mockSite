@@ -1,0 +1,74 @@
+html {
+ background-color: rgba(76, 16, 0, 1);
+}
+
+/* .hidden {
+	width: 0px;
+	height: 0px;
+	margin: auto;
+	position: absolute;
+	top: 323px;
+	background-color: hsla(41, 88%, 50%, 0.73);
+	border-radius: 15px;
+	border: none; 
+} */
+
+#panel1{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	margin: auto;
+	margin-top: 10px;
+	background-color: hsla(8, 96%, 59%, 0.73);
+	border-radius: 15px;
+	border: none;
+	cursor: pointer;
+	transition: width .2s,height .8s;
+	transition-timing-function: ease;	
+}
+#panel2{
+	opacity: 0.0;
+	width: 0px;
+	height: 0px;
+	margin: auto;
+	margin-top: 2px;
+	position: inherit;	
+	background-color: hsla(286, 45%, 46%, 0.73);
+	border-radius: 15px;
+	border: none;
+	visibility: inherit;
+	transition: width .2s,height .8s;
+	transition-timing-function: ease-out;	
+}
+#panel3{
+	opacity: 0.0;
+	width: 0px;
+	height: 0px;
+	margin: auto;
+	margin-top: 3px;
+	position: inherit;
+	background-color: hsla(41, 88%, 50%, 0.73);
+	border-radius: 15px;
+	border: none;
+	visibility: inherit;
+	transition: width .4s,height .15s;
+	transition-timing-function: ease-out;	
+}
+#panel1:hover{
+	width: 1120px;
+	height: 320px;
+}
+#panel1:hover + #panel2{
+	opacity: 1.0;
+	width: 1120px;
+	height: 250px;
+	transition-delay: .18s;
+	top: 323px;
+}
+#panel1:hover + #panel2 + #panel3{
+	opacity: 1.0;
+	width: 1120px;
+	height: 250px;
+	transition-delay: .5s;
+	top: 255px;
+}
