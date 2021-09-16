@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/style.css">
-		<link href="js/main.js">
-		<title>JS Test</title>
-	</head>
 
-	<body>
-		<div id="container">
-			<div id="panel1">
-				<!-- <h1 class="panel1Content">'Ello!</h1> -->
-			</div>
-			<div id="panel2" class="hidden">	
-				<!-- <h2>STUFF</h2>							 -->
-			</div>
-			<div id="panel3" class="hidden">				
-			</div>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="js/main.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>JS Test</title>
+</head>
+
+<body>
+	<div class="flex-container">
+		<div id="panel1" class="">
+			<!-- <h1 class="hidden">Section 1</h1> -->
+		</div>
+		<div id="panel2" class="infoPanel hidden">
+			<!-- <h1 class="hidden">Section 2</h1> -->
+		</div>
+		<div id="panel3" class="infoPanel hidden">
+			<!-- <h1 class="hidden">Section 3</h1> -->
+		</div>
 	</div>
 	<script>
+
+
+		$("#panel1").click(function () {
+			$("#panel1").addClass('activate');
+			$("#panel2").addClass('activate');
+			$("#panel3").addClass('activate');
+		});
+
+		$("#panel1").dblclick(function () {
+			$("#panel1").removeClass('activate');
+			$("#panel2").removeClass('activate');
+			$("#panel3").removeClass('activate');
+		});
+
+	
+
 	</script>
-	</body>
+</body>
+
 </html>

@@ -1,5 +1,19 @@
-html {
- background-color: rgba(76, 16, 0, 1);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+.flex-container{
+	display: flex;
+  flex-direction: column;
+}
+body{
+	background-color: #4c1000;
+}
+.flex-container {
+  max-height: 800px;
 }
 #panel1,
 #panel2,
@@ -7,6 +21,7 @@ html {
 	margin: auto;
 	border-radius: 15px;
 	border: none;
+	transition-timing-function: ease;
 }
 #panel2,
 #panel3{
@@ -15,7 +30,6 @@ html {
 	height: 0px;
 	position: inherit;
 	visibility: inherit;
-	transition-timing-function: ease-out;	
 }
 #panel1{
 	width: 20px;
@@ -23,35 +37,74 @@ html {
 	position: relative;
 	margin-top: 10px;
 	background-color: hsla(8, 96%, 59%, 0.73);
+	border:hsla(8, 96%, 59%, 0.73) solid 1px;
 	cursor: pointer;
-	transition: width .2s,height .8s;
-	transition-timing-function: ease;	
+	transition: width .2s,height .5s;		
 }
 #panel2{
 	margin-top: 2px;
-	background-color: hsla(286, 45%, 46%, 0.73);	
-	transition: width .2s,height .8s;	
+	background-color: hsla(286, 45%, 46%, 0.73);
+	border:hsla(286, 45%, 46%, 0.73) solid 1px;	
+	transition: width .2s,height .5s;	
 }
 #panel3{
 	margin-top: 3px;
 	background-color: hsla(41, 88%, 50%, 0.73);
-	transition: width .4s,height .15s;
+	border:hsla(41, 88%, 50%, 0.73) solid 1px;
+	transition: width .4s,height .5s;
 }
 #panel1:hover{
 	width: 1120px;
-	height: 320px;
+	height: 320px;	
+}
+#panel1.activate{
+	width: 1120px;
+	height: 320px;	
+	background-color: hsla(8, 96%, 59%, 0.73);
+	border:hsla(8, 96%, 59%, 0.73) solid 1px;
+}
+#panel1.activate:hover{
+	width: 1120px;
+	height: 900px;
+	background-color: #4c1000;
+	border:hsla(8, 96%, 59%, 0.73) solid 1px;
 }
 #panel1:hover + #panel2{
 	opacity: 1.0;
 	width: 1120px;
 	height: 250px;
-	transition-delay: .18s;
 	top: 323px;
 }
+#panel2.activate{
+	opacity: 1.0;
+	width: 1120px;
+	height: 250px;
+	top: 323px;
+	background-color: hsla(286, 45%, 46%, 0.73);
+	border:hsla(286, 45%, 46%, 0.73) solid 1px;
+}
+#panel2.activate:hover{	
+	height: 900px;
+	background-color: #4c1000;
+	border:hsla(286, 45%, 46%, 0.73) solid 1px;
+} 
 #panel1:hover + #panel2 + #panel3{
 	opacity: 1.0;
 	width: 1120px;
 	height: 250px;
-	transition-delay: .5s;
+	transition-delay: .18s;
 	top: 255px;
 }
+#panel3.activate{
+	opacity: 1.0;
+	width: 1120px;
+	height: 250px;
+	top: 255px;
+	background-color: hsla(41, 88%, 50%, 0.73);
+	border:hsla(41, 88%, 50%, 0.73) solid 1px;
+}
+#panel3.activate:hover{
+	height: 900px;
+	background-color: #4c1000;
+	border:hsla(41, 88%, 50%, 0.73) solid 1px;
+} 
